@@ -1,0 +1,18 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: null
+  - model: null
+  - task: null
+
+mixed_precision: bf16
+seed: 42
+eval_num_inference_steps: 10
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: .
+  output_subdir: null

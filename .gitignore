@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.package_check/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and local configuration
+.env
+.venv/
+env/
+venv/
+
+# Evaluation outputs and local simulator state
+evaluate_results/
+outputs/
+logs/
+runs/
+/.libero_plus/
+
+# Vendored third-party source trees keep local assets and nested repositories out of releases.
+/third_party/.git_metadata/
+/third_party/LIBERO/.git/
+/third_party/LIBERO/libero/libero/assets/
+/third_party/LIBERO/libero/datasets/
+/third_party/LIBERO-plus/.git/
+/third_party/LIBERO-plus/assets.zip
+/third_party/LIBERO-plus/libero/libero/assets/
+/third_party/RoboTwin/.git/
+/third_party/RoboTwin/assets/
+/third_party/RoboTwin/envs/curobo/
+/third_party/RoboTwin/eval_result/
+/third_party/RoboTwin/policy/vid2wam_policy
+
+# Checkpoints and generated media
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.mp4
+*.webm
+
+*.log
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

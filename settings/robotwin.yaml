@@ -1,0 +1,47 @@
+# @package _global_
+
+defaults:
+  - evaluation
+  - override /task: robotwin
+  - _self_
+
+ckpt: null
+gpu_id: 0
+
+EVALUATION:
+  robotwin_root: ./third_party/RoboTwin
+  policy_name: vid2wam_policy
+  task_name: null
+  task_config: demo_randomized
+  instruction_type: unseen
+  eval_num_episodes: 100
+  environment_test: false
+  environment_test_max_steps: 5
+  output_dir: ./evaluate_results/robotwin/${now:%Y%m%d_%H%M%S}
+
+  action_horizon: null
+  replan_steps: 24
+  num_inference_steps: ${eval_num_inference_steps}
+  sigma_shift: null
+  text_cfg_scale: 1.0
+  negative_prompt: ""
+  rand_device: cpu
+  tiled: false
+  timing_enabled: false
+  skip_get_obs_within_replan: true
+
+  dataset_stats_path: null
+  device: cuda
+  checkpoint_base_path: null
+  skip_download: false
+
+MULTIRUN:
+  num_gpus: 8
+  max_tasks_per_gpu: 2
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: .
+  output_subdir: null
