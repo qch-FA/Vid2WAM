@@ -166,3 +166,19 @@ python benchmarks/robotwin/launch_suite.py \
 ## Acknowledgements
 
 The evaluation code in this repository was developed with reference to [FastWAM](https://github.com/yuantianyuan01/FastWAM), [Wan2.1](https://github.com/Wan-Video/Wan2.1), [Wan2.2](https://github.com/Wan-Video/Wan2.2), [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio), [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), [LIBERO-Plus](https://github.com/sylvestf/LIBERO-plus) and [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin). We thank the authors for their open-source implementation.
+
+## Citation
+
+If you find our work helpful, please cite:
+
+```bash
+@misc{qiu2026vid2wamdistillingvideodiffusion,
+  title={Vid2WAM: Distilling Video Diffusion Priors into World Action Models},
+  author={Chenhao Qiu and Ruixiang Wang and Runyi Zhao and Sixu Lin and Songen Gu and Shufeng Nan and Guiliang Liu and Kui Jia and Yanwei Fu and Simo Wu},
+  year={2026},
+  eprint={2608.08558},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2608.08558},
+}
+```
