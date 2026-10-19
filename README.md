@@ -10,7 +10,7 @@ This repository contains the implementation code for Vid2WAM: Distilling Video D
 ## Release Progress
 
 - [x] Checkpoints and evaluation code
-- [ ] Teacher and IDM training code
+- [x] Teacher and IDM training code
 - [ ] Pseudo-data generation code
 - [ ] Distillation training code
 
@@ -38,10 +38,16 @@ Clone the repository:
 ```bash
 git clone https://github.com/qch-FA/Vid2WAM.git
 cd Vid2WAM
+conda create -n vid2wam python=3.10 -y
+conda activate vid2wam
+python -m pip install --upgrade pip setuptools wheel
+pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
 pip install -e .
 ```
 
-Then download the Wan2.2 VAE, BF16 UMT5-XXL encoder, and tokenizer:
+For evaluation, download the Wan2.2 VAE, BF16 UMT5-XXL encoder, and tokenizer. For teacher and IDM training, continue with [Teacher and IDM Training](#teacher-and-idm-training).
+
+Evaluation weights:
 
 ```bash
 python - <<'PY'
@@ -66,7 +72,13 @@ export DIFFSYNTH_MODEL_BASE_PATH="$PWD/checkpoints"
 export DIFFSYNTH_SKIP_DOWNLOAD=true
 ```
 
+## Teacher and IDM Training
+
+See [`teacher/`](teacher/README.md).
+
 ## Evaluation
+
+Run evaluation commands from the repository root (`Vid2WAM/`).
 
 ### LIBERO
 

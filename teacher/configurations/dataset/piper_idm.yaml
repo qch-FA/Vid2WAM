@@ -1,0 +1,23 @@
+debug: ${debug}
+data_root: data/realworld_merged/piper_realworld11
+input_source: lerobot
+view_mode: stitched
+ratio_eval: 0.05
+
+target_key: action
+target_space: null
+expected_robot_type: aloha
+expected_target_dim: 32
+image_keys:
+  - observation.images.cam_high
+  - observation.images.cam_left_wrist
+  - observation.images.cam_right_wrist
+
+num_frames: ${algorithm.num_frames}
+frame_stride: 2
+dino_size: 512
+
+use_gt_mask: false
+use_transform: true
+do_flip: false
+crop_and_resize: false

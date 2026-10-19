@@ -1,0 +1,15 @@
+defaults:
+  - base_algo
+  - _self_
+
+model_name: resnet_plus
+backbone_type: resnet50
+output_dim: 7
+num_frames: 3
+normalization_stats: auto
+train_mean: null
+train_std: null
+
+# Set pretrained=false when loading a complete IDM checkpoint offline.
+pretrained: true
+pretrained_path: null

@@ -52,3 +52,10 @@ checkpoints/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Teacher/IDM training artifacts
+teacher/data/
+teacher/latest-run
+*_split_indices.txt
+*.ckpt
+wandb/

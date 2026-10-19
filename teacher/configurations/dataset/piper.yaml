@@ -1,0 +1,25 @@
+defaults:
+  - video_base
+  - _self_
+
+data_root: data/piper_teacher_sft
+metadata_path: piper_videos.csv
+load_prompt_embed: true
+load_video_latent: false
+height: 448
+width: 448
+fps: 10
+pad_mode: slowdown
+trim_mode: random_cut
+
+filtering:
+  n_frames: [0, 2000]
+  height: [0, 4096]
+  width: [0, 4096]
+  fps: [0, 100]
+
+augmentation:
+  is_augment: false
+  random_flip: null
+  ratio: [1.0, 1.0]
+  scale: [1.0, 1.0]

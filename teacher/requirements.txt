@@ -1,0 +1,2 @@
+# Run from the repository root: pip install -r teacher/requirements.txt
+-e .[teacher]

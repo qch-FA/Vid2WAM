@@ -1,0 +1,21 @@
+debug: ${debug}
+data_root: /path/to/libero/root
+split_name: train
+ratio_eval: 0.05
+
+input_source: video
+video_backend: av
+target_key: action
+is_abs: true
+abs_action_state_key: observation.states.ee_state
+image_keys:
+  - observation.images.image
+  - observation.images.wrist_image
+view_resize_size: [224, 224]
+
+num_frames: ${algorithm.num_frames}
+frame_stride: 1
+dino_size: null
+
+use_transform: true
+do_flip: false

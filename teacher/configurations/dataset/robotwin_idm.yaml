@@ -1,0 +1,25 @@
+debug: ${debug}
+data_root: data/robotwin
+video_root: data/robotwin/videos
+input_source: video
+view_mode: stitched
+task_config: demo_clean
+ratio_eval: 0.05
+
+action_key: joint_action/vector
+rgb_key: observation/head_camera/rgb
+single_rgb_key: observation/head_camera/rgb
+stitched_rgb_keys:
+  - observation/head_camera/rgb
+  - observation/left_camera/rgb
+  - observation/right_camera/rgb
+mask_key: observation/head_camera/left_arm_mask
+
+num_frames: ${algorithm.num_frames}
+frame_stride: 2
+dino_size: 512
+
+use_gt_mask: false
+use_transform: true
+do_flip: true
+crop_and_resize: false

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "vid2wam"
 version = "0.1.0"
-description = "Vid2WAM evaluation for LIBERO and RoboTwin"
+description = "Vid2WAM training and evaluation for LIBERO and RoboTwin"
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
@@ -32,6 +32,27 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+teacher = [
+  "lightning>=2.6,<2.7",
+  "diffusers>=0.34,<0.35",
+  "transformers>=4.51,<4.52",
+  "peft>=0.15,<0.16",
+  "sentencepiece>=0.2,<0.3",
+  "ftfy>=6.3,<7",
+  "h5py>=3.11,<4",
+  "opencv-python>=4.10,<4.12",
+  "decord==0.6.0",
+  "av==14.0.1",
+  "pyarrow>=15,<24",
+  "scipy>=1.11,<2",
+  "matplotlib>=3.8,<4",
+  "wandb>=0.19,<0.20",
+  "wandb-osh>=1.2,<2",
+  "colorama>=0.4,<1",
+  "msgpack>=1,<2",
+  "pyzmq>=26,<28",
+  "easydict>=1.13,<2",
+]
 dev = ["pytest>=8,<9"]
 
 [tool.setuptools.packages.find]
