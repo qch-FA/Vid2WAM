@@ -43,7 +43,7 @@ class VideoPredictionExperiment(BaseLightningExperiment):
                     reduce_dtype=torch.bfloat16,
                     buffer_dtype=torch.bfloat16,
                 ),
-                cpu_offload=True, # Enable CPU Offload to save GPU memory for VAE activations
+                cpu_offload=False, # Keep gradients on GPU for gradient accumulation
                 auto_wrap_policy=ModuleWrapPolicy(self.algo.classes_to_shard()),
                 sharding_strategy="FULL_SHARD",
                 # sharding_strategy="HYBRID_SHARD",
